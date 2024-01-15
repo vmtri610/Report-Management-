@@ -81,10 +81,38 @@ a {
   border-collapse: collapse;
 }
 
+.left table thead tr:first-child th {
+  padding: 20px;
+  border-bottom: 1px solid #c5c5c5;
+  background-color: #f4f4f4;
+  color: #525252;
+}
+
+.left table thead tr:first-child .search input {
+  width: 90%;
+  height: 15px;
+  outline: none;
+  border: none;
+  padding: 0 10px;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #262626;
+  background-color: #f4f4f4;
+}
+
+.left table thead tr:first-child .filter {
+  color: #ffffff;
+  background-color: #393939;
+}
+
+.left table thead tr:first-child .filter span {
+  font-weight: 400;
+}
+
 .left table thead tr th {
   padding: 20px;
   text-align: left;
-  background-color: #c5c5c5;
+  background-color: #e0e0e0;
   color: #161616;
   font-weight: 600;
 }
