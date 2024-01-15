@@ -79,7 +79,6 @@ a {
 .left table {
   width: 100%;
   border-collapse: collapse;
-  border: 1px solid #262626;
 }
 
 .left table thead tr th {
@@ -97,16 +96,30 @@ a {
   color: #525252;
 }
 
+tr.footer td {
+  text-align: center; /* Canh giữa theo chiều ngang */
+  vertical-align: middle; /* Canh giữa theo chiều dọc */
+}
+
+.left .footer span {
+  margin: 0 20px;
+  cursor: pointer;
+}
+
+.left .footer span:nth-child(2) {
+  border-bottom: 3px solid #182fc6;
+}
+
 .right {
   margin-left: 20px;
   width: 40%;
   border-left: #dadada 2px solid;
+  padding-left: 15px;
 }
 
 .right .info {
   display: flex;
   align-items: center;
-  margin-left: 25px;
 }
 
 .right .image {
@@ -122,7 +135,7 @@ a {
 }
 
 .right .text {
-  margin-left: 40px;
+  margin-left: 20px;
 }
 
 .right .text .name {
@@ -147,7 +160,6 @@ a {
 
 .right .reason {
   margin-top: 30px;
-  margin-left: 40px;
   background-color: #f4f4f4;
   padding: 15px;
 }
@@ -167,7 +179,6 @@ a {
 
 .right .desc {
   margin-top: 30px;
-  margin-left: 40px;
   background-color: #f4f4f4;
   padding: 15px;
 }
@@ -205,5 +216,118 @@ a {
 }
 
 .right .action .btn:hover {
+  opacity: 0.9;
+}
+
+.right .row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.right .row h2 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #262626;
+}
+
+.right .line {
+  width: 100%;
+  height: 1px;
+  background-color: #dadada;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.modal {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: none; /* Bắt đầu với display: none; để ẩn dialog */
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  width: 500px;
+  height: 320px;
+  background-color: #f4f4f4;
+  padding: 20px;
+}
+
+.modal .modal-content .row {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal .modal-content .row .title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #262626;
+}
+
+.modal .modal-content .row .close {
+  cursor: pointer;
+}
+
+.modal .modal-content label {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  display: inline-block;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #262626;
+}
+
+.modal .modal-content label span {
+  color: red;
+}
+
+.modal .modal-content select {
+  width: 100%;
+  height: 40px;
+  border: 1px solid #dadada;
+  padding: 0 10px;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #262626;
+}
+
+.modal .modal-content input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid #dadada;
+  padding: 0 10px;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #262626;
+}
+
+.modal .modal-content .btn {
+  display: flex;
+  justify-content: center;
+}
+
+.modal .modal-content .btn__save {
+  margin-top: 20px;
+  padding: 12px 35px;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #ffffff;
+  cursor: pointer;
+  transition: 0.2s;
+  background-color: #262626;
+  opacity: 1;
+}
+
+.modal .modal-content .btn__save:hover {
   opacity: 0.9;
 }

@@ -12,6 +12,7 @@
       href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
   <body>
     <header>
@@ -99,11 +100,49 @@
                   <td>Pending</td>
                   <td><a href="#!">Active</a></td>
                 </tr>
+                <tr>
+                  <td>123456</td>
+                  <td>mtri</td>
+                  <td>11/12/2023</td>
+                  <td>Fake</td>
+                  <td>Pending</td>
+                  <td><a href="#!">Active</a></td>
+                </tr>
+                <tr>
+                  <td>123456</td>
+                  <td>mtri</td>
+                  <td>11/12/2023</td>
+                  <td>Fake</td>
+                  <td>Pending</td>
+                  <td><a href="#!">Active</a></td>
+                </tr>
+                <tr class="footer">
+                  <td colspan="6" >
+                    <span><i class="fa-solid fa-caret-left"></i></span>
+                    <span>1</span>
+                    <span>2</span>
+                    <span>3</span>
+                    <span>4</span>
+                    <span>5</span>
+                    <span>...</span>
+                    <span>30</span>
+                    <span><i class="fa-solid fa-caret-right"></i></span>
+                  </td>
+                </tr>
               </tbody>
             </table>
           </div>
 
           <div class="right">
+            <div class="row">
+              <h2>USER</h2>
+              <div class="icon">
+                <img src="./assets/img/more.png" alt="" />
+              </div>
+            </div>
+
+            <div class="line"></div>
+
             <div class="info">
               <div class="image">
                 <img
@@ -136,10 +175,34 @@
 
             <div class="action">
               <button class="btn btn__skip">Skip</button>
-              <button class="btn btn__accept">Accept</button>
+              <button id="myBtn" class="btn btn__accept ">Accept</button>
           </div>
         </div>
       </div>
     </main>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class="row">
+          <span class="title">CONFIRM</span>
+          <span class="close"><i class="fa-solid fa-xmark"></i></span>
+        </div>
+         <label for="action">Action<span>*</span></label>
+          <select name="" id="action">
+            <option value="">Block Account</option>
+            <option value="">Warning Account</option>
+          </select>
+          <label for="cause">Cause<span>*</span></label>
+          <input type="text" name="" id="cause">
+
+          <div class="btn">
+            <button class="btn__save">Save & Notify User</button>
+          </div>
+      </div>
+    </div>
+
+    <script src="./report.js"></script>
   </body>
 </html>
